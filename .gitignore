@@ -154,3 +154,6 @@ project/plugins/project/
 # End of https://www.toptal.com/developers/gitignore/api/intellij,java,scala,sbt
 
 .vscode/
+.bloop/
+.metals/
+
