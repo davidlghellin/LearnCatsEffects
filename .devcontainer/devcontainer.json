@@ -1,0 +1,19 @@
+{
+	"name": "Scala",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"scala-lang.scala",
+				"scalameta.metals",
+				"hbenl.vscode-test-explorer",
+				"Anan.jetbrains-darcula-theme"
+			],
+			"settings": {
+				"workbench.colorTheme": "JetBrains Darcula Theme"
+			}
+		}
+	}
+ }
