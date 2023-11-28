@@ -25,9 +25,18 @@ object IoIntroduccionEjercicios {
   def sequenceTakeLast_v1[A, B](ioa: IO[A], iob: IO[B]): IO[B] =
     ioa.flatMap(_ => iob)
 
+  def sequenceTakeLast_v2[A, B](ioa: IO[A], iob: IO[B]): IO[B] =
+    ioa *> iob // andThen
+
+  def sequenceTakeLast_v3[A, B](ioa: IO[A], iob: IO[B]): IO[B] =
+    ioa >> iob // andThen con by-name call
+
   // 2
   def sequenceTakeFirst[A, B](ioa: IO[A], iob: IO[B]): IO[A] =
     ioa.flatMap(a => iob.map(_ => a))
+
+  def sequenceTakeFirst_v1[A, B](ioa: IO[A], iob: IO[B]): IO[A] =
+    ioa <* iob // "antes"
 
   // 3
   def forever[A](io: IO[A]): IO[A] =
